@@ -11,7 +11,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 // app.use(cors());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.FRONT_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow the necessary HTTP methods
   credentials: true, 
   }));
